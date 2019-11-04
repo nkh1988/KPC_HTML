@@ -38,7 +38,7 @@ body{
   background: blue;
   padding: 30px 15px;
   overflow: hidden;
-  /*display: flex; */
+  /*display: flex;*/
  /* flex-flow: row wrap;
   justify-content: space-evenly; */
 }
