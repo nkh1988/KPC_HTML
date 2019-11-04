@@ -37,20 +37,26 @@ body{
 .main{
   background: blue;
   padding: 30px 15px;
-  height: 60vh;
-  display: flex;
-  /* flex-direction: row;
-  flex-wrap: wrap; */
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  overflow: hidden;
+  /*display: flex; */
+ /* flex-flow: row wrap;
+  justify-content: space-evenly; */
+}
+.group{
+  float: left;
+  margin-left: 15px;
+  margin-right: 10px;
+  min-height: 400px;
 }
 .group1{
   background: teal;
   width:250px;
+
 }
 .group2 {
   background: tomato;
   width:380px;
+
 }
 .group3{
   background: yellowgreen;
