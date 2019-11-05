@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
 @import url("./normalize.css");
+@import url("./fontello.css");
 *, *::before, *::after{
   box-sizing: border-box;
 }
@@ -20,7 +21,7 @@ a{
   outline: none;
 }
 a:focus{
-  box-shadow: 0 0 5px 1px red;
+  box-shadow: 0 0 5px 1px cadetblue;
 }
 html {
   font-size:10px;
@@ -29,9 +30,8 @@ body{
   background:#fff;
   color:#181818;
   font-size: 1.4rem;
-  { font-family: 'Spoqa Han Sans', 'Sans-serif'; 
-    font-weight:300;
-  }
+  font-family: 'Spoqa Han Sans', 'Sans-serif'; 
+  font-weight:300;
 }
 /*컨테이너*/
 .container{
@@ -41,14 +41,21 @@ body{
   width: 940px;
   margin: 0 auto;
 }
+
+/*해더*/
+.header{
+  background: #fff;
+  position: relative;
+  border-radius: 0 0 15px 15px;
+  padding-bottom: 5px;
+}
 /*로고*/
 .logo{
-  background: blue;
   margin-top: 0;
   margin-bottom: 0;
   position: absolute;
-  left: 35px;
-  top: 50px;
+  left: 60px;
+  top: 45px;
 }
 
 /*멤버 링크*/
@@ -56,14 +63,12 @@ body{
   margin: 0 23px 0 30px;
   padding-left: 0;
   list-style-type: none;
-  background: pink;
   text-align: right;
   font-size: 0;
 }
 
 .member li, .member a {
   display: inline-block;
-  background: lime;
 }
 .member li{
   font-size: 1.4rem;
@@ -72,23 +77,81 @@ body{
 }
 .member a {
   padding: 0.5em;
-  background: orange;
   text-transform: uppercase;
 }
 
-/*해더*/
-.header{
-  background: #fff;
+/*메인 메뉴*/
+.navigation{
+  padding-bottom: 32px;
+}
+.menu{
+  height: 49px;
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(2,52,95,1) 26%, rgba(2,118,169,1) 50%, rgba(2,169,226,1) 83%, rgba(0,212,255,1) 100%, rgba(3,2,52,1) 100%, rgba(4,82,197,1) 100%, rgba(9,9,121,1) 100%, rgba(7,7,98,1) 100%, rgba(5,4,70,1) 100%);
+  margin: 0 30px;
+  padding-left: 230px;
+  list-style: none;
+  border-top: 2px solid #222;
+  border-radius: 0 0 5px 5px;
+}
+.menu-item{
   position: relative;
+  float: left;
+  border-left: 2px solid rgba(255,255,255,0.5);
+}
+.btn-menu{
+  display: block;
+  padding: 1em 1.45em;
+  color:#fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-shadow: 1px 0 0 #000, 0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000;
+}
+.menu-act .btn-menu{
+  color: #ff0;
+}
+.btn-menu:focus{
+  box-shadow: initial;
+}
+.menu-act .btn-menu::after{
+  content: "";
+  background: papayawhip;
+  display: block;
+  border-top: 2px solid #000;
+  position: relative; 
+  top: 1em;
+}
+.sub-menu{
+  display: none;
+  position: absolute;
+  padding-left:0;
+  list-style: none;
+  top:49px;
+  white-space: nowrap;
+}
+.sub-menu1, .sub-menu2, .sub-menu3{
+  left: 0;
+}
+.sub-menu4, .sub-menu5, .sub-menu6{
+  right: 0;
+}
+.menu-act .sub-menu{
+  display: block 
+}
+.sub-menu li, .sub-menu a {
+  display: inline-block !important;
+}
+.sub-menu a{
+  padding: 0.5em 0.5em 0.5em 0;
 }
 /*비주얼*/
 .visual {
-  background: orange;
-  height: 10vh;
+  height: 120px;
 }
 /*메인 콘텐츠*/
 .main{
   background: blue;
+  border-radius: 15px 15px 0 0;
   padding: 30px 15px;
   overflow: hidden;
   /*display: flex;*/
