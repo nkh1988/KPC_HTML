@@ -313,6 +313,7 @@ body{
 }
 .validation-list a:hover, 
 .validation-list a:focus{
+  font-weight: 700;
   color: #DC3513;
   outline: 0;
 }
